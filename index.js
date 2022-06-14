@@ -20,8 +20,11 @@ const url = `https://simpsons-quotes-api.herokuapp.com/quotes`;
 
 button.addEventListener("click", (e) => {
     // console.log('refresh card');
+    button.classList.toggle('spin__rotate-start');
+    console.log(button)
      e.preventDefault;
     fetchPokemonJSON();
+
 })
 
 // This function loads pokemon data from the Pokemon API
@@ -37,14 +40,14 @@ function fetchPokemonJSON() {
         .then( (pokemon) =>{
             console.log('data decoded from JSON:', pokemon);
 
-       
-           
-           
-            
             cardName.querySelector("p").innerHTML = pokemon[0].character;
              cardImg.src=pokemon[0].image;
              console.log(cardCitation)
             cardName.querySelector("blockquote").innerHTML =pokemon[0].quote;
+            setTimeout(() => {
+                button.classList.toggle('spin__rotate-start');
+            }, 250);
+           
         });
 }
 

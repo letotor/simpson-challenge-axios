@@ -110,3 +110,29 @@ button:hover{
     /* padding-top:3rem; */
 
 }
+
+.spin__rotate-start{
+    transform: rotate(360deg);
+    animation: rotating 0.5s linear infinite;
+}
+
+.spin__rotate-stop {
+    transform: rotate(360deg);
+    animation: rotating 0s linear ;
+}
+
+
+
+
+
+
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
