@@ -113,7 +113,7 @@ button:hover{
 
 .spin__rotate-start{
     transform: rotate(360deg);
-    animation: rotating 0.5s linear infinite;
+    animation: rotating 1s linear infinite;
 }
 
 .spin__rotate-stop {
@@ -121,7 +121,12 @@ button:hover{
     animation: rotating 0s linear ;
 }
 
-
+/* .opacity{
+    opacity:0;
+    color:transparent;
+    font-size: 0rem;;
+    transition:all 0s 2s ease-in-out;
+} */
 
 
 

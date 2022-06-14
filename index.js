@@ -21,6 +21,8 @@ const url = `https://simpsons-quotes-api.herokuapp.com/quotes`;
 button.addEventListener("click", (e) => {
     // console.log('refresh card');
     button.classList.toggle('spin__rotate-start');
+    cardImg.classList.toggle('opacity');
+    // cardCitation.classList.toggle('opacity');
     console.log(button)
      e.preventDefault;
     fetchPokemonJSON();
@@ -46,6 +48,8 @@ function fetchPokemonJSON() {
             cardName.querySelector("blockquote").innerHTML =pokemon[0].quote;
             setTimeout(() => {
                 button.classList.toggle('spin__rotate-start');
+                // cardImg.classList.toggle('opacity');
+                // cardCitation.classList.toggle('opacity');
             }, 250);
            
         });
