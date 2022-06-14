@@ -46,6 +46,7 @@ function fetchPokemonJSON() {
              cardImg.src=pokemon[0].image;
              console.log(cardCitation)
             cardName.querySelector("blockquote").innerHTML =pokemon[0].quote;
+            // onrajouter 250ms apres le chargement poru chargement rapide
             setTimeout(() => {
                 button.classList.toggle('spin__rotate-start');
                 // cardImg.classList.toggle('opacity');

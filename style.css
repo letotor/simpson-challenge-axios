@@ -1,43 +1,48 @@
-body{
+body {
     background: #222;
-    color:rgb(86, 86, 231);
+    color: rgb(86, 86, 231);
+    margin: auto;
 }
 
 
-h1,h2,h3,h4{
-    color: rgb(86, 86, 231)!important;
+h1,
+h2,
+h3,
+h4 {
+    color: rgb(86, 86, 231) !important;
 }
 
 
-h1{
-    font-size:5rem!important;
+h1 {
+    font-size: 5rem !important;
     text-align: center;
 }
 
-button{
+button {
     position: relative;
-    border-radius:50%;
-    width:50px;
-    height:50px;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
     box-shadow: 2px 1px blur(10px) #fed30d,
-    2px 1px blur(10px) #fed30d;
+        2px 1px blur(10px) #fed30d;
     border: 2px solid transparent;
-    transition:  0.6s 0s ease-in-out;
+    transition: 0.6s 0s ease-in-out;
     transform: scale(1.0);
-    padding:2rem;
-    margin:1rem;
+    padding: 2rem;
+    margin: 1rem;
 }
 
-button i{
+button i {
     position: absolute;
     top: 50%;
 
-    left:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    
+
 }
-button:hover{
+
+button:hover {
     transform: scale(1.1);
     /* border:2px solid #fed30d; */
     border: 2px solid #fed30d;
@@ -48,54 +53,61 @@ button:hover{
 
 .container {
     padding-top: 2rem;
-    display:block;
-    margin:auto;
-    width:800px;
-    height:100vh;
+    display: block;
+    margin: auto;
+    max-width: 800px;
+    /* min-width:350px; */
+    height: 100vh;
 }
 
-.card{
-   
+.card {
+
     background: #999;
-    border-radius:3rem;
-    margin:2rem;
-    color:#fed30d;
-    
+    border-radius: 3rem;
+    margin: 2rem;
+    color: #fed30d;
+
 }
-.card__header{
+
+.card__header {
     font-size: 3rem;
     text-align: center;
 
 
 }
 
-.card__header-container{
-        display: flex;
-        justify-content:start ;
-        align-content: center;
-        align-items: center;
+.card__header-container {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    align-items: center;
 
 }
+
 .card__header-container p {
-    
-    width:100%
+
+    width: 100%
 }
 
 .card__body {
     display: flex;
-    flex-direction: row;;
+    flex-direction: row;
+    ;
     justify-content: stretch;
-    border-top:1px solid #fed30d;
+    border-top: 1px solid #fed30d;
 }
 
-.card__left{
-    flex:1;
-    width:100%;
-    margin:2rem;
- 
+.card__left {
+    flex: 1;
+    /* width: 100%; */
+    margin: 2rem;
+
 }
+
 .card__left img {
     width: 50%;
+    object-fit: cover;
+    align-self: center;
 }
 
 
@@ -105,20 +117,24 @@ button:hover{
     align-self: center;
     text-align: start;
     font-size: 1.8rem;
-    color:white;
+    color: white;
     overflow: hidden;
     /* padding-top:3rem; */
 
 }
 
-.spin__rotate-start{
+blockquote {
+    font-size: 2rem !important;
+}
+
+.spin__rotate-start {
     transform: rotate(360deg);
     animation: rotating 1s linear infinite;
 }
 
 .spin__rotate-stop {
     transform: rotate(360deg);
-    animation: rotating 0s linear ;
+    animation: rotating 0s linear;
 }
 
 /* .opacity{
@@ -139,5 +155,53 @@ button:hover{
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:600px) {
+    h1 {
+        font-size: 3rem !important;
+
+    }
+
+    .card__body {
+        flex-flow: column wrap;
+    }
+
+    .card__header {
+        font-size: 2rem;
+    }
+
+    .card__right {
+        font-size: 2.5rem;
+    }
+
+    .card__left {
+        flex: 1;
+        width: 100%;
+        margin: 1rem;
+    }
+
+    blockquote {
+        font-size: 1.5rem !important;
+    }
+    button {
+            width: 1rem!important;;
+            height: 1rem !important;
+                ;
+        }
+}
+
+@media screen and (max-width:300px) {
+    .card__header-container {
+            display: flex;
+            justify-content: stretch;
+            align-content: center;
+            align-items: center;
+    
+        }
+    .card__header {
+        font-size: 1.1rem ;
+
     }
 }
